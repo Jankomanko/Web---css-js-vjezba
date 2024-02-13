@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap'); 
+
+:root{
+    --crna:#202e3b;
+    --plava:#2b7db8;
+    --text-shadow:0.1rem 0.1rem 0.3rem #333;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif; 
+    transition: all 0.3s linear;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+header{
+    background-color: rgba(40, 51, 82, 0.8);
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 2.5rem;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+nav a{
+    font-size: 2rem;
+    color: white;
+    text-decoration: none;
+    text-shadow: var(--text-shadow);
+
+}
+
+nav a:hover{
+    color: var(--plava);
+}
+
+/* main*/
+
+main{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-shadow: var(--text-shadow);
+    position: relative;
+    
+}
+
+h1{
+    font-size: 7rem;
+    color: var(--plava);
+}
+
+h2{
+    font-size: 5rem;
+    color: white;
+}
+
+.btn{
+    background-color: var(--plava);
+    color: white;
+    font-size: 1.6rem;
+    padding: 1rem;
+    display: inline-block;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    border-radius: 15px;
+    box-shadow: var(--text-shadow);
+    text-decoration: none;
+}
+
+.btn:hover{
+    background-color: var(--crna);
+    letter-spacing: 1px;
+}
+
+
+.icons a{
+    font-size: 1.6rem;
+    text-decoration: none;
+    color: var(--plava);
+    background-color: white;
+    width: 4rem;
+    height: 4rem;
+    line-height: 4rem;
+    border-radius: 50%;
+    box-shadow: var(--text-shadow);
+    margin: 0 0.5rem;
+}
+
+video{
+    position: absolute;
+    z-index: -1;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+
+.fa-bars{
+    color: white;
+    font-size: 3rem;
+    cursor: pointer;
+    display: none;
+}
+
+@media all and (max-width:600px){
+    html{
+        font-size: 50%;
+    }
+
+    .fa-bars{
+        display: block;
+        z-index: 2;
+    }
+
+    nav{
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        left: -101%;
+        background-color: rgba(0, 0, 0 ,0.7);
+    
+    }
+
+    nav ul{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 50%;
+        background-color: var(--crna);
+    }
+
+    .nav-toggle {
+        left: 0;
+    }
+
+
+}
